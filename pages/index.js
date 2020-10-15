@@ -7,7 +7,7 @@ import imageUrlFor from "../utils/imageUrlFor";
 import Filters from "../shared/filter/filter";
 import { concertData } from "../data/data";
 
-const query = `*[_type == "movie"] {
+const query = `*[_type == "details"] {
   _id,
   title,
   releaseDate,
@@ -17,7 +17,7 @@ const query = `*[_type == "movie"] {
 }[0...50]
 `;
 
-const Movies = ({ movies }) => {
+const Movies = ({ details }) => {
   return (
     <Layout>
       <div>
@@ -25,31 +25,31 @@ const Movies = ({ movies }) => {
       </div>
       <div className="movies">
         <div className="list">
-          {concertData.map(movie => (
-            <div key={movie._id} className="movie_padding">
-              <Link href="/movie/[id]" as={`/movie/${movie._id}`}>
+          {concertData.map(details => (
+            <div key={details._id} className="movie_padding">
+              <Link href="/details/[id]" as={`/details/${details._id}`}>
                 <a>
-                  {/* {movie.poster && (
+                  {/* {details.poster && (
                     <img
-                      src={imageUrlFor(movie.poster)
+                      src={imageUrlFor(details.poster)
                         .ignoreImageParams()
                         .width(300)}
                       width="100"
-                      height={100 / movie.posterAspect}
+                      height={100 / details.posterAspect}
                     />
                   )} */}
-                  <img src={movie.imageUrl}/>
-                    <div style={{ paddingTop: "0.2em", color: "rgba(255,255,255,1)" }} >
-                      {movie.name}
-                      {movie.date}
-                      {movie.city}
-                      {movie.state}
-                      {movie.type}
+                  <img src={details.imageUrl}/>
+                    <div style={{ paddingTop: "0.2em", color: "rgba(255,255,255,1)"}} >
+                      {details.name}
+                      {details.date}
+                      {details.city}
+                      {details.state}
+                      {details.type}
                     </div>
-                    {/* <h3 style={{ color: "rgba(255,255,255,1)" }}>{movie.title}</h3>
-                  {movie.director && (
+                    {/* <h3 style={{ color: "rgba(255,255,255,1)" }}>{details.title}</h3>
+                  {details.director && (
                     <span style={{ color: "rgba(255,255,255,1)" }} className="movies-list__directed-by">
-                      Directed by {movie.director}
+                      Directed by {details.director}
                     </span>
                   )} */}
                 </a>
@@ -74,9 +74,9 @@ const Movies = ({ movies }) => {
 };
 
 export const getStaticProps = async () => {
-  const movies = await sanity.fetch(query);
+  const details = await sanity.fetch(query);
   return {
-        props: { movies} // will be passed to the page component as props
+        props: { details} // will be passed to the page component as props
   };
 };
 

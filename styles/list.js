@@ -37,8 +37,10 @@ export default css`
 
   .list img {
     display: block;
-    height: auto;
-    width: 100%;
+    // height: auto;
+    // width: 100%;
+    height: 350px !important;
+    width: 250px !important;
     margin-right: 0.5rem;
   }
 

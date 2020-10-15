@@ -12,10 +12,11 @@ export default function Layout(props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>POST UI</title>
+        <title>POST Up</title>
       </Head>
       <div className="col-md-12">
-        <div className="col-md-6 try">
+       <span className="d-inline-block" style={{color:"white"}}><h2 className="heading">PostUp</h2></span>
+        <div className="col-md-6 try d-inline-block">
           {/* <span className="a133_780">Try artist, date, genre or venue</span> */}
           <Search />
         </div>
@@ -58,10 +59,16 @@ export default function Layout(props) {
         .shows{
           display:block;
           left:60%;
+          margin-top: -2%;
         }
         .try{
           display:block;
-          left:19%;
+          left:7%;
+          color:white;
+        }
+        .heading{
+          left: 17%;
+          position: relative;
         }
         footer img {
           display: inline-block;
@@ -192,6 +199,10 @@ export default function Layout(props) {
           font-size: 16px;
           opacity: 1;
           text-align: right;
+          padding-left:10px;
+        }
+        .MuiFormControl-root.MuiTextField-root.MuiFormControl-fullWidth{
+          display:d-inline-block:
         }
       `}</style>
       <style jsx global>{`

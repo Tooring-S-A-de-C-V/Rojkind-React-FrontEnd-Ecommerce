@@ -8,6 +8,7 @@ export default function Search() {
     return (
         <Autocomplete
             id="combo-box-demo"
+            className="search"
             options={top100Films}
             getOptionLabel={(option) => option.title}
             style={{ width: 300 }}

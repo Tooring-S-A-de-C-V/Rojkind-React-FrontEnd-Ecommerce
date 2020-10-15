@@ -5,12 +5,12 @@ import Filters from "../shared/filter/filter";
 import { eventTime, concertData } from "../data/data";
 import Link from "next/link";
 import { useRouter } from 'next/router'
-
+// there is no use of this code ,we will delete it in upcoming release.
 const Schedule = () => {
     const router = useRouter()
 
     const onClickConcert = (id) => {
-        router.push({ href: "/movie/[id]", as: `/movie/${id}` })
+        router.push({ href: "/details/[id]", as: `/details/${id}` })
     }
 
     return (
@@ -29,7 +29,7 @@ const Schedule = () => {
                                 {item.concert.map((concert) => {
                                     return (
                                         <div>
-                                            <Link href="/movie/[id]" as={`/movie/${concert._id}`}>
+                                            <Link href="/details/[id]" as={`/details/${concert._id}`}>
                                                 <div>
                                                     {concert.name}
                                                     {concert.city}

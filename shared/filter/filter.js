@@ -11,12 +11,12 @@ const Filters = () => {
     return (
         <>
             <div className="">
-                <div className="v136_0 genres_regions_dates col-md-6">
+                <div className="genres_regions_dates col-md-6">
                     <Genres />
                     <Regions />
                     <Dates />
                 </div>
-                <div className="v136_2 col-md-6">
+                <div className="grid_schedule col-md-6">
                     <span className="v135_114">Sort by: Date</span>
                     <div className="v135_142">
                         <Link href="/">

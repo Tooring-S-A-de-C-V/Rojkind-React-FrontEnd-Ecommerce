@@ -630,8 +630,35 @@ export default css`
   }  
   .genres_regions_dates{
     left:4%;
+    border: 1px solid #FFFFFF;
+    width: 370px;
+    height: 54px;
+    margin: 30px;
+    opacity: 1;
+    position: relative;
    }
    .tags{
-     margin-left:3%;
+     margin-left:3%; 
+     margin-top:4%; 
+font-family: IBM Plex Mono;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: left;
+
+   }
+   .def{
+     left:10% !important;
+     width:50% !important;
+   }
+   .grid_schedule{
+    position: relative;
+    left: 59%;
+    margin-top: -6.5%;
+   }
+   .tag-padding{
+     padding-left:10px !important;
    }
 `;

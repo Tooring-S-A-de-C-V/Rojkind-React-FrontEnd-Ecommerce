@@ -32,6 +32,7 @@ const Genres = () => {
                 <div className="v136_6">
                     <span className="v135_967" onClick={handleClick}>Genres</span>
                 </div>
+
                 <Popover
                     id={id}
                     open={open}
